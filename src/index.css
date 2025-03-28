@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
+
+:root {
+  --dark-bg: #1a1a1a;
+  --dark-surface: #242424;
+  --dark-accent: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-color: #4f46e5;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+}
+
+.neo-shadow {
+  box-shadow: 8px 8px 16px #151515,
+              -8px -8px 16px #252525;
+}
+
+.neo-pressed {
+  box-shadow: inset 5px 5px 10px #151515,
+              inset -5px -5px 10px #252525;
+}
+
+.neo-button {
+  background: var(--dark-surface);
+  box-shadow: 5px 5px 10px #151515,
+              -5px -5px 10px #252525;
+  transition: all 0.3s ease;
+}
+
+.neo-button:hover {
+  box-shadow: 3px 3px 6px #151515,
+              -3px -3px 6px #252525;
+  transform: translateY(-2px);
+}
+
+.neo-card {
+  background: var(--dark-surface);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.neo-card:hover {
+  transform: translateY(-5px);
+} 

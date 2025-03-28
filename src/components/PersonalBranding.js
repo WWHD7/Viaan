@@ -1,10 +1,10 @@
 import React from 'react';
-import { Mail, Linkedin, Twitter, Award, Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Award, Calendar, MapPin } from 'lucide-react';
 
 // Mock components from shadcn/ui since we can't directly import them
 const Button = ({ children, variant, type, href }) => {
   return (
-    <a href={href} target={href?.startsWith('http') ? "_blank" : undefined}>
+    <a href={href} target={href?.startsWith('http') ? "_blank" : undefined} rel="noreferrer">
       <button 
         className={`px-4 py-2 rounded-md font-medium ${
           variant === 'outline' 
@@ -27,24 +27,6 @@ const CardContent = ({ children, className }) => {
   return <div className={className || "p-6"}>{children}</div>;
 };
 
-const Input = ({ type, placeholder }) => {
-  return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      className="px-4 py-2 rounded-md border border-gray-300 w-full"
-    />
-  );
-};
-
-const Badge = ({ children }) => {
-  return (
-    <span className="bg-blue-100 text-blue-800 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">
-      {children}
-    </span>
-  );
-};
-
 const PersonalBranding = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-gray-100 p-6 text-gray-800">
@@ -58,8 +40,8 @@ const PersonalBranding = () => {
             />
           </div>
         </div>
-        <h1 className="text-5xl font-extrabold leading-tight mb-4">Hi, I'm Akshay Hegde</h1>
-        <p className="text-lg text-gray-600 mb-2">Operator • Investor • Builder</p>
+        <h1 className="text-5xl font-extrabold leading-tight mb-4">Dreamer. Creator. Investor.</h1>
+        <p className="text-lg text-gray-600 mb-2">Hi, I'm Akshay Hegde</p>
         <p className="flex items-center justify-center text-gray-600 mb-6">
           <MapPin className="w-4 h-4 mr-1" /> Bangalore, India
         </p>
@@ -89,7 +71,7 @@ const PersonalBranding = () => {
 
       <section className="bg-white py-16 border-t border-b border-gray-200">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center">Work Experience</h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">Building The Future</h2>
           <div className="space-y-8">
             <Card>
               <CardContent className="p-6">
@@ -156,76 +138,6 @@ const PersonalBranding = () => {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center">Media & Press Coverage</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            <a href="https://www.forbes.com/30-under-30/2021/asia/retail-ecommerce?profile=shakedeal" target="_blank" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gray-200 overflow-hidden">
-                  <img 
-                    src="https://imageio.forbes.com/specials-images/imageserve/607708432e610417a0aa612a/0x0.jpg?format=jpg&crop=1080,1080,x0,y0,safe&height=416&width=416&fit=bounds" 
-                    alt="Forbes 30 Under 30" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent>
-                  <div className="text-sm text-blue-600 mb-2">Forbes Asia</div>
-                  <h3 className="text-lg font-semibold mb-2">Forbes 30 Under 30 Asia 2021: Retail & Ecommerce</h3>
-                  <p className="text-gray-600 text-sm italic">
-                    "More than 10,000 companies have become clients of the Bangalore-based B2B platform for office supplies and industrial goods since the Hegde brothers founded it in 2016."
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
-            
-            <a href="https://www.financialexpress.com/business/industry-integration-of-b2b-marketplaces-into-supply-chain-networks-for-increased-efficiency-3224744/" target="_blank" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gray-200 overflow-hidden">
-                  <img 
-                    src="https://www.financialexpress.com/wp-content/uploads/2023/08/logistics.jpg?w=1024" 
-                    alt="Financial Express" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent>
-                  <div className="text-sm text-blue-600 mb-2">Financial Express</div>
-                  <h3 className="text-lg font-semibold mb-2">Simplifying P2P</h3>
-                  <p className="text-gray-600 text-sm italic">
-                    "Integration of B2B marketplaces into supply chain networks for increased efficiency"
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
-            
-            <a href="https://www.entrepreneur.com/en-in/news-and-trends/procurement-partners/365404" target="_blank" className="block">
-              <Card className="h-full hover:shadow-lg transition-shadow">
-                <div className="h-48 bg-gray-200 overflow-hidden">
-                  <img 
-                    src="https://assets.entrepreneur.com/content/3x2/2000/1613392515-MyPost36.jpg?format=pjeg&auto=webp&crop=16:9&width=675&height=380" 
-                    alt="Entrepreneur.com" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardContent>
-                  <div className="text-sm text-blue-600 mb-2">Entrepreneur.com</div>
-                  <h3 className="text-lg font-semibold mb-2">Procurement Partners</h3>
-                  <p className="text-gray-600 text-sm italic">
-                    "In 2016, brothers Akshay and Akash Hegde & Santhosh Reddy came up with the idea of ShakeDeal – a B2B ecommerce platform that solves problems in the procurement and distribution space"
-                  </p>
-                </CardContent>
-              </Card>
-            </a>
-          </div>
-
-          <div className="mt-8 text-center">
-            <Button href="https://stories.shakedeal.com/news/" variant="outline">
-              View All Media Coverage
-            </Button>
-          </div>
-        </div>
-      </section>
-      
       <section className="bg-white py-16 border-t border-b border-gray-200">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-10 text-center">Achievements</h2>
@@ -239,13 +151,25 @@ const PersonalBranding = () => {
             <Card className="flex flex-col items-center text-center p-6">
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Entrepreneur 35 under 35</h3>
-              <p className="text-gray-600">ShakeDeal</p>
+              <p className="text-gray-600">Class of 2021</p>
             </Card>
             
             <Card className="flex flex-col items-center text-center p-6">
               <Award className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-4">E-Commerce Startup of the Year</h3>
-              <p className="text-gray-600">ShakeDeal (2020)</p>
+              <p className="text-gray-600">2020</p>
+            </Card>
+
+            <Card className="flex flex-col items-center text-center p-6">
+              <Award className="w-12 h-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-4">CNBC Young Turks</h3>
+              <p className="text-gray-600">2021</p>
+            </Card>
+
+            <Card className="flex flex-col items-center text-center p-6">
+              <Award className="w-12 h-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-4">Fastest Growing Small Business</h3>
+              <p className="text-gray-600">2020</p>
             </Card>
           </div>
         </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import PersonalBranding from './components/PersonalBranding';
+import PersonalBrandingV2 from './components/PersonalBrandingV2';
 
 function App() {
   return (
     <div className="App">
-      <PersonalBranding />
+      <PersonalBrandingV2 />
     </div>
   );
 }

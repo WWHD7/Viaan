@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Calendar, Award } from 'lucide-react';
 
 // Simple Card component
 const Card = ({ children, className }) => {
@@ -148,9 +148,47 @@ function App() {
           </div>
         </section>
 
+        {/* Achievements Section */}
+        <section className="bg-white py-16 border-t border-b border-gray-200">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold mb-10 text-center">Achievements</h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              <Card className="flex flex-col items-center text-center p-6">
+                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Forbes 30 Under 30 Asia</h3>
+                <p className="text-gray-600">Class of 2021</p>
+              </Card>
+              
+              <Card className="flex flex-col items-center text-center p-6">
+                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Entrepreneur 35 under 35</h3>
+                <p className="text-gray-600">Class of 2021</p>
+              </Card>
+              
+              <Card className="flex flex-col items-center text-center p-6">
+                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-4">E-Commerce Startup of the Year</h3>
+                <p className="text-gray-600">2020</p>
+              </Card>
+
+              <Card className="flex flex-col items-center text-center p-6">
+                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-4">CNBC Young Turks</h3>
+                <p className="text-gray-600">2021</p>
+              </Card>
+
+              <Card className="flex flex-col items-center text-center p-6">
+                <Award className="w-12 h-12 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Fastest Growing Small Business</h3>
+                <p className="text-gray-600">2020</p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         <footer className="py-8 text-center text-gray-600">
           <p>© {new Date().getFullYear()} Akshay Hegde. All rights reserved.</p>
-          <div className="mt-2 text-xs text-gray-400">Version 2.0 - With Experience Sections</div>
+          <div className="mt-2 text-xs text-gray-400">Version 2.0 - With Experience & Achievements</div>
         </footer>
       </div>
     </div>

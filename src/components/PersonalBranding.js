@@ -244,6 +244,15 @@ const PersonalBranding = () => {
           </div>
         </div>
       </section>
+
+      <footer className="py-8 text-center text-gray-600">
+        <p>© {new Date().getFullYear()} Akshay Hegde. All rights reserved.</p>
+        <div className="mt-4">
+          <a href="mailto:akshay.0015@gmail.com" className="text-blue-600 hover:underline mx-2">Contact</a>
+          <a href="https://www.linkedin.com/in/akshay7hegde/" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline mx-2">LinkedIn</a>
+        </div>
+        <div className="mt-2 text-xs text-gray-400">Version 1.0</div>
+      </footer>
     </div>
   );
 };

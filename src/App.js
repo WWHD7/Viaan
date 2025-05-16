@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award } from 'lucide-react';
+import { Calendar, Award, MapPin } from 'lucide-react';
 
 // Simple Card component
 const Card = ({ children, className }) => {
@@ -11,13 +11,63 @@ const CardContent = ({ children, className }) => {
 };
 
 function App() {
+  // Speaking engagement data
+  const pastTalks = [
+    {
+      title: "Taking a company from Seed to Series A",
+      event: "StartUp Summit 2019",
+      date: "June 2019",
+      location: "Bangalore, India",
+      description: "Discussing How to Scale with some of the best minds of the ecosystem",
+      imageUrl: "/StartUp Summit 2019.jpeg",
+    },
+    {
+      title: "How procurement is no longer about focusing on cost savings only",
+      event: "13th Express, Logistics & Supply Chain Conclave",
+      date: "Nov 2019",
+      location: "Taj Land's End - Mumbai, India",
+      description: "Discussion with industry experts from various sectors on how procurement is no longer about focusing on cost savings only, and how does one manage to build long term relationships with suppliers while shifting focus beyond the cost",
+      imageUrl: "/13th Express, Logistics & Supply Chain Conclave.jpeg",
+    },
+    {
+      title: "Unlocking growth for small and medium businesses through digital transformation",
+      event: "Digital Bharat Economy Enclave by Financial Express",
+      date: "March 2024",
+      location: "The Lalit Hotel New Delhi, India",
+      description: "Deep dive into the question of whether government-backed digital initiatives like ONDC, GEM, TReDS, OCEN, etc., can drive the adoption of digital technologies within SMEs",
+      imageUrl: "/Digital Bharat Economy Enclave by Financial Express.jpeg",
+    },
+    {
+      title: "Digital Transformation AI Solutions to Address Common Pain Points in Supply Chain and Procurement",
+      event: "NXTGEN ProcureConnect2024 - Delhi Chapter",
+      date: "July 2024",
+      location: "Sheraton New Delhi, India",
+      description: "Shared valuable insights on current global supply chain issues and showcased how AI is transforming enterprise commerce through innovations and intelligence.",
+      imageUrl: "/NXTGEN ProcureConnect2024 - Delhi Chapter.png",
+    }
+  ];
+  
   return (
     <div className="App">
       <div className="min-h-screen bg-gradient-to-br from-white to-gray-100 p-6 text-gray-800">
         <header className="max-w-5xl mx-auto py-10 text-center">
+          <div className="mb-6">
+            <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden relative">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5603AQFr8pnfLkA6aQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702105639602?e=1748476800&v=beta&t=4LQuajR0FiL3NyMtH5Ib7aZqanNKbdVc9On5V2qISdw"
+                alt="Akshay Hegde - Forbes 30 Under 30 Entrepreneur and Founder"
+                width={128}
+                height={128}
+                className="object-cover"
+                style={{ display: 'block' }}
+              />
+            </div>
+          </div>
           <h1 className="text-5xl font-extrabold leading-tight mb-4">Dreamer. Creator. Investor.</h1>
           <p className="text-lg text-gray-600 mb-2">Hi, I'm Akshay Hegde</p>
-          <p className="text-gray-600 mb-6">Bangalore, India</p>
+          <p className="flex items-center justify-center text-gray-600 mb-6">
+            <MapPin className="w-4 h-4 mr-1" aria-hidden="true" /> <span>Bangalore, India</span>
+          </p>
           <div className="flex justify-center gap-4">
             <a href="mailto:akshay.0015@gmail.com" className="px-4 py-2 rounded-md font-medium bg-blue-600 text-white hover:bg-blue-700">
               Get in Touch
@@ -36,6 +86,12 @@ function App() {
             </p>
             <p>
               I specialize in applying AI-first thinking to B2B challenges — from building autonomous procurement workflows to designing scalable platforms for procurement, employee recognition and enterprise gifting.
+            </p>
+            <p>
+              I'm also an active angel investor with an eye for disruptive startups. A recent highlight — a company I backed was acquired by Unicommerce and is now the second-largest shipping aggregator in India. Supporting founders on their journey to scale is something I care deeply about.
+            </p>
+            <p>
+              If you're working on the future of AI, enterprise tech, or B2B innovation — let's connect.
             </p>
           </div>
         </section>
@@ -144,7 +200,85 @@ function App() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Shipway */}
+              <Card>
+                <CardContent className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-1">Angel Investor</h3>
+                      <p className="text-blue-600 mb-1">Shipway</p>
+                    </div>
+                    <div className="text-gray-500 text-sm flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" /> 2021 - Present
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    As India's second-largest shipping aggregator, Shipway enables D2C and enterprise brands to streamline fulfillment, automate tracking, and scale their post-order operations with confidence. Recently acquired by Unicommerce.
+                  </p>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold mb-2">Shipping Aggregation & Fulfillment Automation</h4>
+                      <p className="text-gray-600">Providing a unified interface to access multiple courier partners, automate order fulfillment, and optimize shipping decisions at scale.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Post-Purchase Customer Experience</h4>
+                      <p className="text-gray-600">Enabling real-time tracking, branded notifications, and proactive communication to reduce delivery anxiety and improve customer retention.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Returns & RTO Management</h4>
+                      <p className="text-gray-600">Offering advanced tools to reduce Return-to-Origin (RTO) rates, streamline reverse logistics, and protect margins for e-commerce businesses.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
+          </div>
+        </section>
+
+        {/* Speaking Engagements Section */}
+        <section className="max-w-5xl mx-auto py-16">
+          <h2 className="text-3xl font-bold mb-10 text-center">Where I've Shared My Voice</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {pastTalks.map((talk, index) => (
+              <Card key={index}>
+                <div className="w-full h-56 overflow-hidden rounded-t-lg bg-gray-100">
+                  <img
+                    src={talk.imageUrl}
+                    alt={`${talk.title} at ${talk.event}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    style={{ display: 'block' }}
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-semibold mb-2">{talk.title}</h3>
+                  <p className="text-blue-600 mb-2">{talk.event}</p>
+                  <div className="flex items-center text-gray-500 mb-2">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    <span>{talk.date}</span>
+                  </div>
+                  <div className="flex items-center text-gray-500 mb-4">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{talk.location}</span>
+                  </div>
+                  <p className="text-gray-600 mb-4 flex-grow">{talk.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-lg text-gray-700 mb-6">
+              Interested in having me speak at your next event? 
+              I share insights on B2B innovation, procurement transformation, and entrepreneurship.
+            </p>
+            <a 
+              href="mailto:akshay@shakedeal.com?subject=Speaking Inquiry" 
+              className="px-4 py-2 rounded-md font-medium border border-gray-300 bg-transparent hover:bg-gray-50"
+            >
+              Invite Me to Speak
+            </a>
           </div>
         </section>
 

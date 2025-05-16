@@ -19,7 +19,7 @@ function App() {
       date: "June 2019",
       location: "Bangalore, India",
       description: "Discussing How to Scale with some of the best minds of the ecosystem",
-      imageUrl: "/StartUp Summit 2019.jpeg",
+      imageUrl: "/startup-summit-2019.jpeg",
     },
     {
       title: "How procurement is no longer about focusing on cost savings only",
@@ -27,7 +27,7 @@ function App() {
       date: "Nov 2019",
       location: "Taj Land's End - Mumbai, India",
       description: "Discussion with industry experts from various sectors on how procurement is no longer about focusing on cost savings only, and how does one manage to build long term relationships with suppliers while shifting focus beyond the cost",
-      imageUrl: "/13th Express, Logistics & Supply Chain Conclave.jpeg",
+      imageUrl: "/express-logistics-supply-chain.jpeg",
     },
     {
       title: "Unlocking growth for small and medium businesses through digital transformation",
@@ -35,7 +35,7 @@ function App() {
       date: "March 2024",
       location: "The Lalit Hotel New Delhi, India",
       description: "Deep dive into the question of whether government-backed digital initiatives like ONDC, GEM, TReDS, OCEN, etc., can drive the adoption of digital technologies within SMEs",
-      imageUrl: "/Digital Bharat Economy Enclave by Financial Express.jpeg",
+      imageUrl: "/digital-bharat-economy-enclave.jpeg",
     },
     {
       title: "Digital Transformation AI Solutions to Address Common Pain Points in Supply Chain and Procurement",
@@ -43,7 +43,7 @@ function App() {
       date: "July 2024",
       location: "Sheraton New Delhi, India",
       description: "Shared valuable insights on current global supply chain issues and showcased how AI is transforming enterprise commerce through innovations and intelligence.",
-      imageUrl: "/NXTGEN ProcureConnect2024 - Delhi Chapter.png",
+      imageUrl: "/nxtgen-procureconnect2024-delhi.png",
     }
   ];
   

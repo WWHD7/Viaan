@@ -54,7 +54,7 @@ function App() {
           <div className="mb-6">
             <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden relative">
               <img
-                src="https://media.licdn.com/dms/image/v2/D5603AQFr8pnfLkA6aQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702105639602?e=1748476800&v=beta&t=4LQuajR0FiL3NyMtH5Ib7aZqanNKbdVc9On5V2qISdw"
+                src="/profile-photo.jpeg"
                 alt="Akshay Hegde - Forbes 30 Under 30 Entrepreneur and Founder"
                 width={128}
                 height={128}

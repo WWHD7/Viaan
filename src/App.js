@@ -54,7 +54,7 @@ function App() {
           <div className="mb-6">
             <div className="w-32 h-32 rounded-full bg-gray-200 mx-auto mb-4 overflow-hidden relative">
               <img
-                src="/profile-photo.jpeg"
+                src="/Profile Photo.JPG"
                 alt="Akshay Hegde - Forbes 30 Under 30 Entrepreneur and Founder"
                 width={128}
                 height={128}

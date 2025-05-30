@@ -43,7 +43,7 @@ function App() {
       date: "July 2024",
       location: "Sheraton New Delhi, India",
       description: "Shared valuable insights on current global supply chain issues and showcased how AI is transforming enterprise commerce through innovations and intelligence.",
-      imageUrl: "/ProcureConnect",
+      imageUrl: "/ProcureConnect.jpg",
     }
   ];
   

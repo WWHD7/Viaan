@@ -1,51 +1,59 @@
-# Akshay Hegde - Personal Landing Page
+# Akshay Hegde - Landing Page Revamp 2025
 
-This repository contains two versions of Akshay Hegde's personal landing page:
-- V1: Original landing page
-- V2: Enhanced landing page with updated company experiences and SEO improvements
+This is the revamp version of Akshay Hegde's personal landing page, created on January 9, 2025.
 
-## Development
+## Project Details
+- **Original Source**: my-landing-page-optimized
+- **Created**: January 9, 2025
+- **Purpose**: Revamp and enhance the existing landing page
+- **Version**: 2.0.0
 
-To run locally:
+## Features
+- Complete personal branding content
+- Speaking engagements with images
+- Media coverage and achievements
+- Professional design with Tailwind CSS
+- SEO optimized with structured data
+- Responsive design for all devices
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start development server:
+   ```bash
+   npm start
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Build for Production
 
 ```bash
-# Run V1 (default version)
-npm start
-
-# Run V2
-npm run start:v2
+npm run build
 ```
 
-## Deployment to Vercel
+## Project Structure
+- `src/App.js` - Main application component
+- `public/` - Static assets including images
+- `src/index.css` - Global styles
+- `tailwind.config.js` - Tailwind CSS configuration
 
-### Option 1: Deploying Both Versions with Different URLs
+## Content Sections
+- Hero section with profile photo
+- About section
+- Experience (ShakeDeal, ShakePe, Aegon Power, Shipway)
+- Speaking engagements
+- Media coverage
+- Achievements
+- Contact information
 
-1. **For V1 (Original Version)**:
-   - Create a new Vercel project or use your existing one
-   - Deploy without any special environment variables
-   - Set your custom domain (e.g., v1.hedge7.com or hedge7.com)
-
-2. **For V2 (Enhanced Version)**:
-   - Create a new Vercel project
-   - Set environment variable `REACT_APP_ENTRY` to `v2`
-   - Use the build command: `npm run build:v2`
-   - Set your custom domain (e.g., v2.hedge7.com or hedge7.com)
-
-### Option 2: Switching Versions on the Same URL
-
-To switch from V1 to V2 on the same Vercel project:
-
-1. Go to your Vercel project settings
-2. Add environment variable: `REACT_APP_ENTRY` = `v2`
-3. Redeploy your project
-
-## SEO Features
-
-V2 includes enhanced SEO features:
-- Structured JSON-LD data for Person, Organizations, and Website schemas
-- Open Graph and Twitter Card meta tags for better social sharing
-- Semantic HTML5 elements and proper heading hierarchy
-- Accessible attributes for better screen reader support
-- Optimized image loading with descriptive alt text
-- Mobile-responsive design and performance optimizations
-- robots.txt and sitemap.xml for better indexing 
+## Next Steps for Revamp
+- [ ] Review and update content
+- [ ] Enhance design elements
+- [ ] Add new features
+- [ ] Optimize performance
+- [ ] Deploy to production

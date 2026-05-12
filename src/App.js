@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Award, MapPin, Mail, Linkedin, ExternalLink } from 'lucide-react';
+import { Calendar, Award, MapPin, Mail, Linkedin, ExternalLink, Play } from 'lucide-react';
 
 // Glassmorphic Card component
 const GlassCard = ({ children, className = "" }) => {
@@ -50,7 +50,19 @@ function App() {
       imageUrl: "/ProcureConnect.jpg",
     }
   ];
-  
+
+  const podcastAppearances = [
+    {
+      title: "How to Build a Multi Crore B2B Tech Business in 10 Years? | ShakeDeal Founder Akshay Hegde's Journey",
+      host: "Gokul Raj",
+      hostUrl: "https://www.youtube.com/@gokulraj-co",
+      date: "2026",
+      description: "10 years. 200+ enterprise clients. Tata, Adani, Siemens, Vedanta. A long-form conversation on building ShakeDeal from scratch, scaling B2B procurement tech, and lessons from a decade in the trenches.",
+      thumbnail: "https://i.ytimg.com/vi/8slHmiv2LOI/maxresdefault.jpg",
+      videoUrl: "https://www.youtube.com/watch?v=8slHmiv2LOI",
+    },
+  ];
+
   return (
     <div className="App">
       {/* Space Black Animated background */}
@@ -319,6 +331,72 @@ function App() {
           </div>
         </section>
 
+        {/* Podcast Appearances Section */}
+        <section className="max-w-6xl mx-auto py-20">
+          <h2 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
+            Podcast Appearances
+          </h2>
+          <p className="text-center text-gray-300 mb-16 max-w-2xl mx-auto">
+            Long-form conversations on B2B, procurement, AI, and the journey of building enterprise tech from India.
+          </p>
+
+          <div className={`grid gap-8 ${podcastAppearances.length === 1 ? 'max-w-3xl mx-auto' : 'grid-cols-1 lg:grid-cols-2'}`}>
+            {podcastAppearances.map((ep, index) => (
+              <GlassCard key={index} className="group hover:scale-105 transition-all duration-500">
+                <a
+                  href={ep.videoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block relative w-full h-72 overflow-hidden rounded-t-2xl bg-gradient-to-br from-gray-800/20 to-black/40"
+                  aria-label={`Watch on YouTube: ${ep.title}`}
+                >
+                  <img
+                    src={ep.thumbnail}
+                    alt={`${ep.title} — featuring Akshay Hegde on ${ep.host}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    style={{ display: 'block' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full backdrop-blur-xl bg-black/40 border border-cyan-500/40 flex items-center justify-center shadow-2xl group-hover:bg-cyan-500/30 group-hover:border-cyan-400 group-hover:scale-110 transition-all duration-300">
+                      <Play className="w-8 h-8 text-white fill-white ml-1" />
+                    </div>
+                  </div>
+                </a>
+                <GlassCardContent>
+                  <div className="flex items-center text-cyan-300 text-sm font-medium mb-3 gap-3">
+                    <span className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {ep.date}
+                    </span>
+                    <span className="text-gray-500">•</span>
+                    <a
+                      href={ep.hostUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-cyan-200 transition-colors"
+                    >
+                      {ep.host}
+                    </a>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-200 transition-colors leading-snug">{ep.title}</h3>
+                  <p className="text-gray-100 text-sm leading-relaxed mb-6">{ep.description}</p>
+                  <a
+                    href={ep.videoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center px-6 py-3 rounded-full font-semibold backdrop-blur-xl bg-white/10 border border-white/30 text-white hover:bg-white/20 hover:border-cyan-500/50 transition-all duration-300"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Watch on YouTube
+                  </a>
+                </GlassCardContent>
+              </GlassCard>
+            ))}
+          </div>
+        </section>
+
         {/* Media & Press Coverage Section */}
         <section className="max-w-6xl mx-auto py-20">
           <h2 className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
@@ -451,7 +529,7 @@ function App() {
                   <Linkedin className="w-6 h-6" />
                 </a>
               </div>
-              <div className="text-sm text-gray-400">Version 2.0 - Space Black Glassmorphic</div>
+              <div className="text-sm text-gray-400">Version 3.0 - Space Black Glassmorphic</div>
             </GlassCardContent>
           </GlassCard>
         </footer>

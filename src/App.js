@@ -54,11 +54,9 @@ function App() {
   const podcastAppearances = [
     {
       title: "How to Build a Multi Crore B2B Tech Business in 10 Years? | ShakeDeal Founder Akshay Hegde's Journey",
-      host: "Gokul Raj",
-      hostUrl: "https://www.youtube.com/@gokulraj-co",
       date: "2026",
       description: "10 years. 200+ enterprise clients. Tata, Adani, Siemens, Vedanta. A long-form conversation on building ShakeDeal from scratch, scaling B2B procurement tech, and lessons from a decade in the trenches.",
-      thumbnail: "https://i.ytimg.com/vi/8slHmiv2LOI/maxresdefault.jpg",
+      thumbnail: "/podcast-thumb-founder-talk.png",
       videoUrl: "https://www.youtube.com/watch?v=8slHmiv2LOI",
     },
   ];
@@ -352,7 +350,7 @@ function App() {
                 >
                   <img
                     src={ep.thumbnail}
-                    alt={`${ep.title} — featuring Akshay Hegde on ${ep.host}`}
+                    alt={ep.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                     style={{ display: 'block' }}
@@ -365,20 +363,9 @@ function App() {
                   </div>
                 </a>
                 <GlassCardContent>
-                  <div className="flex items-center text-cyan-300 text-sm font-medium mb-3 gap-3">
-                    <span className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {ep.date}
-                    </span>
-                    <span className="text-gray-500">•</span>
-                    <a
-                      href={ep.hostUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-cyan-200 transition-colors"
-                    >
-                      {ep.host}
-                    </a>
+                  <div className="flex items-center text-cyan-300 text-sm font-medium mb-3">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {ep.date}
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-cyan-200 transition-colors leading-snug">{ep.title}</h3>
                   <p className="text-gray-100 text-sm leading-relaxed mb-6">{ep.description}</p>
